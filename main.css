@@ -1,57 +1,54 @@
 html, body {
 	height: 100%;
+  background: #f2f2f2;
 }
-.canvas {
-  position: relative;
-  max-width: 90%;
-  height: 100%;
+.wrapper {
+  height: 70vh;
   margin: 0 auto;
-  background: #D0D0D1;
 }
 div {
   -webkit-transform: rotate(-17deg);
   transform: rotate(-17deg);
   position: absolute;
 }
-.pink1 {
-  background: #C65B79;
-  width: 16%;
-  height: 36%;
+.red1 {
+  width: 12%;
+  height: 32%;
   left: 38%;
   bottom: .875%;
 }
-.offwhite {
-  background: #CACBCB;
+.white2 {
+  background: #fff;
   width: 6%;
-  height: 25.9%;
+  height: 21.9%;
   top: 36%;
   left: 21%;
 }
-.yellow1 {
-  background: #C4C14C;
+.grey {
+  background: #a3a3a3;
   width: 7%;
-  height: 31.75%;
+  height: 30%;
   top: 31.5%;
   left: 30%;
 }
 .black1 {
-  background: #161C1A;
+  background: #000;
   width: 2%;
 	height: 32%;
   top: 33%;
   left: 41%;
 }
-.green {
-  background: #33634A;
+.grey1 {
+  background: #a3a3a3;
   width: 8.6%;
-  height: 71.25%;
+  height: 70%;
   bottom: 1%;
   left: 51%;
 }
-.blue {
+.grey2 {
   -webkit-transform: rotate(32.5deg);
   transform: rotate(32.5deg);
-  background: #2F7FBE;
+  background: #a3a3a3;
   width: 8.8%;
   height: 84.5%;
   left: 39%;
@@ -60,37 +57,36 @@ div {
 .red {
   -webkit-transform: rotate(12deg);
   transform: rotate(12deg);
-  background: #C64E3E;
-  width: 8.5%;
-  height: 5.25%;
+  background: #ff0000;
+  width: 8%;
+  height: 4%;
   top: 35%;
-  left: 40%;
+  left: 60%;
 }
 .black2 {
-  background: #2B2E33;
+  background: #000;
   width: 31%;
 	height: 8%;
-  top: 16.75%;
+  top: 16%;
 	left: 38%;
 }
-.pink2 {
-  background: #C65B79;
+.red2 {
   width: 69.7%;
   height: 2.8%;
   top: 14%;
   left: 17.5%;
 }
-.grey {
-  background: #8596A8;
-  width: 80.8%;
+.white {
+  background: #fff;
+  width: 80%;
   height: 7%;
-  top: 8.125%;
-  left: 9.5%;
+  top: 8%;
+  left: 9%;
 }
-.yellow2 {
-  background: #C4C14C;
-  width: 2.75%;
+.white1 {
+  background: #fff;
+  width: 2%;
   height: 6%;
-  top: 7.5%;
+  top: 7%;
   left: 34%;
 }
