@@ -46,19 +46,16 @@ let whiteRect2 = document.getElementById('whiteRect2')
 whiteRect2.onclick = keyframes.play
 
 
-function randomValues() {
-  anime({
-    targets: '.black.black2',
-    translateX: function() {
-      return anime.random(0, 270);
-    },
-    easing: 'easeInOutQuad',
-    duration: 750,
-    complete: randomValues,
-    loop: true,
-    autoplay: false
-  });
-}
+let staggering = anime({
+  targets: '.black.black2',
+  scale: [
+    {value: .1, easing: 'easeOutSine', duration: 500},
+    {value: 1, easing: 'easeInOutQuad', duration: 1200}
+  ],
+  delay: anime.stagger(200, {grid: [14, 5], from: 'center'}),
+  loop: true,
+  autoplay: false
+});
 
 let blackRect2 = document.getElementById('blackRect2')
-blackRect2.onclick = randomValues.play
+blackRect2.onclick = staggering.play
