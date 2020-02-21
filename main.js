@@ -45,17 +45,63 @@ let keyframes = anime({
 let whiteRect2 = document.getElementById('whiteRect2')
 whiteRect2.onclick = keyframes.play
 
+//
+// let staggering = anime({
+//   targets: '.black.black2',
+//   scale: [
+//     {value: .1, easing: 'easeOutSine', duration: 500},
+//     {value: 1, easing: 'easeInOutQuad', duration: 1200}
+//   ],
+//   delay: anime.stagger(200, {grid: [14, 5], from: 'center'}),
+//   loop: true,
+//   rotate: [12, 12],
+//   autoplay: false
+// });
+//
+// let blackRect2 = document.getElementById('blackRect2')
+// blackRect2.onclick = staggering.play
+//
+//
+// let move = anime({
+//   targets: '.red.red2',
+//   translateX: 970,
+//   easing: function(el) {
+//     return el.getAttribute('data-ease');
+//   },
+//   duration: 1000,
+//   loop: true,
+//   autoplay: false
+// })
+//
+//
+// let redRect2 = document.getElementById('redRect2')
+// redRect2.onclick = move.play
 
-let staggering = anime({
+let steps2 = anime({
   targets: '.black.black2',
-  scale: [
-    {value: .1, easing: 'easeOutSine', duration: 500},
-    {value: 1, easing: 'easeInOutQuad', duration: 1200}
-  ],
-  delay: anime.stagger(200, {grid: [14, 5], from: 'center'}),
+  translateX: 350,
+  direction: 'alternate',
   loop: true,
-  autoplay: false
-});
+  background: '#ffffff',
+  rotate: [12, 20],
+  autoplay: false,
+  easing: 'steps(5)'
+})
 
 let blackRect2 = document.getElementById('blackRect2')
-blackRect2.onclick = staggering.play
+blackRect2.onclick = steps2.play
+
+
+let steps = anime({
+  targets: '.grey.grey1',
+  translateX: 250,
+  direction: 'alternate',
+  loop: true,
+  background: '#000000',
+  rotate: [12, 382],
+  autoplay: false,
+  easing: 'steps(5)'
+})
+
+let greyRect1 = document.getElementById('greyRect1')
+greyRect1.onclick = steps.play
