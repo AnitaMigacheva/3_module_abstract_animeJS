@@ -44,3 +44,21 @@ let keyframes = anime({
 
 let whiteRect2 = document.getElementById('whiteRect2')
 whiteRect2.onclick = keyframes.play
+
+
+function randomValues() {
+  anime({
+    targets: '.black.black2',
+    translateX: function() {
+      return anime.random(0, 270);
+    },
+    easing: 'easeInOutQuad',
+    duration: 750,
+    complete: randomValues,
+    loop: true,
+    autoplay: false
+  });
+}
+
+let blackRect2 = document.getElementById('blackRect2')
+blackRect2.onclick = randomValues.play
