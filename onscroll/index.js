@@ -35,3 +35,41 @@ new ScrollMagic.Scene({
   duration: section3.getBoundingClientRect().height
 })
 .addTo(controller)
+.setPin(box2)
+.on('progress', e => {
+  box2Animation.seek(box2Animation.duration * e.progress)
+})
+
+
+// EXAMPLE 3
+
+let lastSection = document.getElementById('last-section')
+let loader = document.querySelector('.loader')
+let circlesWrapper = document.querySelector('.circles-wrapper ')
+
+let loadingScene = new ScrollMagic.Scene({
+  triggerElement: lastSection,
+  tridderHook: 'onEnter'
+})
+
+.addTo(controller)
+.on('enter', () => {
+  setTimeout(addCircles, 200, 20)
+
+})
+
+function addCircles(amount) {
+  let count = 0
+  while (amount > count) {
+    let newDiv = document.createElement('circle')
+    newDiv.classList.add('circle')
+    newDiv.style.background = getRandomColor()
+    circlesWrapper.append(newDiv)
+    count += 1
+  }
+}
+
+
+function getRandomColor() {
+  return `rgb(${Math.round(Math.random() * 255)},${Math.round(Math.random() * 255)},${Math.round(Math.random() * 255)})`
+}
